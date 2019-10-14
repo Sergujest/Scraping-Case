@@ -4,9 +4,8 @@ A python program that scrapes Defacto product datas and write them on a google s
 
 # How To Use
 
-After cloning everything, write "python3 quickstart.py" to terminal. Authorize your google account.
-
-Here is the google sheet document you are scraping to: https://docs.google.com/spreadsheets/d/1Ut5ObFO6cXEZaMAoRcZHwViaVDjuejoLQCd-4PsA7uQ/edit?usp=sharing
+After cloning everything, write "python3 quickstart.py" to terminal. Authorize your google account, then the program will 
+start to scrape. Be sure to change spreadsheetID in writeonsheet file. 
 
 # Why Using Selenium
 
