@@ -43,7 +43,17 @@ def scrape(creds):
                 tempUrl=searchPage.xpath('//div[@id="products"]/div/div[%d]/div/div[1]/a/@href'%productInPageCount)
                 productUrl='https://www.defacto.com.tr{0}'.format(tempUrl[0])
                 print(productUrl)
-                driver.get(productUrl)
+                
+                # If there is a time exception while trying to get the page, try it again
+                isSuccess=False
+                while not isSuccess:
+                    try:
+                        driver.get(productUrl)
+                        isSuccess=True
+                    except TimeoutException as ex:
+                        print("Can not get the page. Trying again.....")
+                
+                
                 productPage=lxml.html.fromstring(driver.page_source)
 
                 # These are the wanted variables
