@@ -90,7 +90,7 @@ def scrape(creds):
                     productInPageCount=productInPageCount+1
                     break
 
-        writeONsheet.write(listOfProducts,totalProductCount,len(listOfProducts),creds)
+        writeonsheet.write(listOfProducts,totalProductCount,len(listOfProducts),creds)
         totalProductCount=totalProductCount+len(listOfProducts)
         searchCount=searchCount+1
 
