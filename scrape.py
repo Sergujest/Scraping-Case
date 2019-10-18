@@ -12,7 +12,7 @@ def scrape(creds):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('headless')
     driver = webdriver.Chrome(chrome_options=chrome_options)
-    driver.implicitly_wait(100)
+    driver.set_page_load_timeout(10)
     searchCount=1
     totalProductCount=2
 
